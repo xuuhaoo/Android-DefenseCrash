@@ -29,4 +29,4 @@ dependencies {
     implementation 'com.tonystark.android:android-cglib:1.1.2'
 }
 
-apply from: 'publish_nexus.gradle'
+apply from: "../publish.gradle"
