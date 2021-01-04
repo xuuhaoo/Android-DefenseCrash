@@ -13,7 +13,8 @@ public class MyApp extends Application implements IExceptionHandler {
   protected void attachBaseContext(Context base) {
     super.attachBaseContext(base);
     DefenseCrash.initialize(this);
-    DefenseCrash.install(this, true, true, true);
+    DefenseCrash.install(this);
+//    DefenseCrash.install(this, true, true, true);
   }
 
   @Override
