@@ -49,12 +49,13 @@ dependencies {
 		  override fun attachBaseContext(base: Context) {
 				super.attachBaseContext(base)
 				DefenseCrash.initialize(this)
-				  DefenseCrash.install { thread, throwable, isSafeMode, isCrashInChoreographer ->
+				DefenseCrash.install { thread, throwable, isSafeMode, isCrashInChoreographer ->
       				//thread: 异常崩溃在的线程对象
 					//throwable: 具体的异常对象
 					//isSafeMode: 如果应用程序崩溃过,但是被我们捕获,那么这个值将会是true来告知开发人员,
 					//具体来讲就是当你的主线程(Main Looper)已经被错误破坏不能够正常loop的时候,我们将使用魔法保证他运行.这称之为安全模式
-					//isCrashInChoreographer: 如果崩溃发生在 OnMeasure/OnLayout/OnDraw 方法中,这将会导致程序白屏或黑屏亦或是一些View显示不成功					//当你收到这个值为True的时候,我们建议你关闭或者重启当前的Activity
+					//isCrashInChoreographer: 如果崩溃发生在 OnMeasure/OnLayout/OnDraw 方法中,这将会导致程序白屏或黑屏亦或是一些View显示不成功					
+					//当你收到这个值为True的时候,我们建议你关闭或者重启当前的Activity
 
 					//你当然可以在本方法中抛出异常,但是你的抛出将会被虚拟机(VM)捕获并且你的进程将被它关闭
 					//我们建议你在这里进行如下操作:
