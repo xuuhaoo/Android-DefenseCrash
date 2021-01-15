@@ -3,7 +3,7 @@
 [ ![Download](https://api.bintray.com/packages/xuuhaoo/maven/DefenseCrash/images/download.svg) ](https://bintray.com/xuuhaoo/maven/DefenseCrash/_latestVersion)
 [![TonyStark](https://img.shields.io/badge/TonyStark-IronMan-red.svg)]()
 
-为了方便中国同学,提供了翻译文档如下:[ ![中文文档](https://bintray.com/xuuhaoo/maven/DefenseCrash/_latestVersion)
+为了方便中国同学,提供了翻译文档如下:[中文文档](https://github.com/xuuhaoo/Android-DefenseCrash/blob/main/README_CN.md)
 ### What is
 This’s a `Crash Defense` library in Android to help you catch the `Java exceptions` which you don’t expected.
 
