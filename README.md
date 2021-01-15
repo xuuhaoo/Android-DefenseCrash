@@ -12,10 +12,10 @@ This’s a `Crash Defense` library in Android to help you catch the `Java except
 
 ```groovy
 allprojects {
-	repositories {
+  repositories {
     //other mavens
     maven(){
-     url "https://dl.bintray.com/xuuhaoo/maven"
+      url "https://dl.bintray.com/xuuhaoo/maven"
     }
   }
 }
