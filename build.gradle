@@ -5,14 +5,14 @@ buildscript {
 
     repositories {
         google()
-        jcenter()
-        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        // 如果依赖华为push
+        maven { url 'http://developer.huawei.com/repo/' }
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.0.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -21,10 +21,10 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
-        maven(){
-            url "https://dl.bintray.com/xuuhaoo/maven"
-        }
+        // 如果依赖华为push
+        maven { url 'http://developer.huawei.com/repo/' }
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
 }
 

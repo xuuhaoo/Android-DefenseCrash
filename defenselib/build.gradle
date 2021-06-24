@@ -31,6 +31,6 @@ version='4.0.0'
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:support-annotations:27.1.1'
-    implementation 'com.tonystark.android:android-cglib:1.1.2'
+    implementation 'com.github.xuuhaoo:Android-Cglib:1.1.3'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
