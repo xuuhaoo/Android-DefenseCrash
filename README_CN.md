@@ -1,6 +1,6 @@
 # Android Defense Crash
 
-[ ![Download](https://api.bintray.com/packages/xuuhaoo/maven/DefenseCrash/images/download.svg) ](https://bintray.com/xuuhaoo/maven/DefenseCrash/_latestVersion)
+[![](https://jitpack.io/v/xuuhaoo/Android-DefenseCrash.svg)](https://jitpack.io/#xuuhaoo/Android-DefenseCrash)
 [![TonyStark](https://img.shields.io/badge/TonyStark-IronMan-red.svg)]()
 
 ### 这是啥
@@ -13,11 +13,9 @@
 ```groovy
 allprojects {
 	repositories {
-        //其他的仓库..
-        maven(){
-            url "https://dl.bintray.com/xuuhaoo/maven"
-        }
-    }
+    //其他的仓库..
+    maven { url 'https://jitpack.io' }
+  }
 }
 ```
 
@@ -25,10 +23,10 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.tonystark.android:defense-crash:最新版本’
+    implementation 'com.github.xuuhaoo:Android-DefenseCrash:最新版本'
 }
 ```
-> 注意: `最新版本`是一个代位词, 真正的版本号请参照 [ ![Download](https://api.bintray.com/packages/xuuhaoo/maven/DefenseCrash/images/download.svg) ](https://bintray.com/xuuhaoo/maven/DefenseCrash/_latestVersion)
+> 注意: `最新版本`是一个代位词, 真正的版本号请参照 [![](https://jitpack.io/v/xuuhaoo/Android-DefenseCrash.svg)](https://github.com/xuuhaoo/Android-DefenseCrash/releases/latest)
 
 ### 怎么用
 * 尽量早的初始化这个库, 我们建议你将如下代码放到`Application` 中的`attachBaseContext(base:Context)`方法中.
