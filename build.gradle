@@ -5,8 +5,6 @@ buildscript {
 
     repositories {
         google()
-        // 如果依赖华为push
-        maven { url 'http://developer.huawei.com/repo/' }
         mavenCentral()
     }
     dependencies {
@@ -21,8 +19,6 @@ buildscript {
 allprojects {
     repositories {
         google()
-        // 如果依赖华为push
-        maven { url 'http://developer.huawei.com/repo/' }
         mavenCentral()
         maven { url 'https://jitpack.io' }
     }
