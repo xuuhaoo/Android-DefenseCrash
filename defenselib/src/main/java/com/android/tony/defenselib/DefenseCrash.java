@@ -1,15 +1,17 @@
 package com.android.tony.defenselib;
 
 import android.content.Context;
+import android.os.Build;
+import androidx.annotation.RequiresApi;
 import android.util.Log;
 
+import com.android.hidden.pass.HiddenApiBypass;
 import com.android.tony.defenselib.handler.ExceptionDispatcher;
 import com.android.tony.defenselib.handler.IExceptionHandler;
 import com.android.tony.defenselib.hook.HookHandler;
 import com.android.tony.defenselib.hook.HookInstrumentation;
 import com.android.tony.defenselib.hook.HookThreadLoop;
 import com.android.tony.defenselib.hook.IHook;
-import com.android.tony.defenselib.hook.Reflection;
 import com.android.tony.defenselib.hook.SafeMode;
 
 
@@ -40,7 +42,9 @@ public final class DefenseCrash {
     if (initialized) {
       return;
     }
-    Reflection.unseal(context);
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+      HiddenApiBypass.addHiddenApiExemptions("L");
+    }
     initialized = true;
     mExceptionDispatcher = new ExceptionDispatcher();
     hookThread = new HookThreadLoop(mExceptionDispatcher);

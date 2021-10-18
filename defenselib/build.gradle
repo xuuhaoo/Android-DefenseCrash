@@ -1,12 +1,13 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 27
+        targetSdkVersion 28
     }
 
     buildTypes {
@@ -24,15 +25,13 @@ android {
     }
 }
 
+group= 'com.github.xuuhaoo'
+version='4.0.2'
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:support-annotations:27.1.1'
-    implementation 'com.tonystark.android:android-cglib:1.1.2'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-}
-
-apply from: "../publish.gradle"
-repositories {
-    maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
-    mavenCentral()
+    implementation 'androidx.annotation:annotation:1.2.0'
+    implementation 'com.github.xuuhaoo:Android-Cglib:1.1.4'
+    implementation 'com.github.xuuhaoo:AndroidHiddenApi:1.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }

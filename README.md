@@ -1,10 +1,10 @@
 # Android Defense Crash
 
-[ ![Download](https://api.bintray.com/packages/xuuhaoo/maven/DefenseCrash/images/download.svg) ](https://bintray.com/xuuhaoo/maven/DefenseCrash/_latestVersion)
+[![](https://jitpack.io/v/xuuhaoo/Android-DefenseCrash.svg)](https://jitpack.io/#xuuhaoo/Android-DefenseCrash)
 [![TonyStark](https://img.shields.io/badge/TonyStark-IronMan-red.svg)]()
 
-为了方便中国同学,提供了翻译文档如下:[ ![中文文档](https://bintray.com/xuuhaoo/maven/DefenseCrash/_latestVersion)
-### What is
+为了方便中国同学,提供了翻译文档如下:[中文文档](https://github.com/xuuhaoo/Android-DefenseCrash/blob/main/README_CN.md)
+### What's this
 This’s a `Crash Defense` library in Android to help you catch the `Java exceptions` which you don’t expected.
 
 ### Integration
@@ -15,9 +15,7 @@ This’s a `Crash Defense` library in Android to help you catch the `Java except
 allprojects {
   repositories {
     //other mavens
-    maven(){
-      url "https://dl.bintray.com/xuuhaoo/maven"
-    }
+    maven { url 'https://jitpack.io' }
   }
 }
 ```
@@ -26,10 +24,10 @@ allprojects {
 
 ```groovy
 dependencies {
-    implementation 'com.tonystark.android:defense-crash:last.version’
+    implementation 'com.github.xuuhaoo:Android-DefenseCrash:last.version’
 }
 ```
-> Attentions: `last.version`is a substitute word, the real version will be found in [ ![Download](https://api.bintray.com/packages/xuuhaoo/maven/DefenseCrash/images/download.svg) ](https://bintray.com/xuuhaoo/maven/DefenseCrash/_latestVersion)
+> Attentions: `last.version`is a substitute word, the real version will be found in [![](https://jitpack.io/v/xuuhaoo/Android-DefenseCrash.svg)](https://github.com/xuuhaoo/Android-DefenseCrash/releases/latest)
 
 ### Use
 * Initialize should be more earlier in application create, we suggest you put the init code in `Application` `attachBaseContext(base:Context)`
