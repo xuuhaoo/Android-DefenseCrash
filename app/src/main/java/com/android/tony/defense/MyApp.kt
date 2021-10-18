@@ -10,9 +10,7 @@ class MyApp : Application(), IExceptionHandler {
   override fun attachBaseContext(base: Context) {
     super.attachBaseContext(base)
     DefenseCrash.initialize(this)
-    DefenseCrash.install { thread, throwable, isSafeMode, isCrashInChoreographer ->
-
-    }
+    DefenseCrash.install (this)
   }
 
   override fun onCreate() {
